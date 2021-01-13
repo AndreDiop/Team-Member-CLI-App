@@ -13,6 +13,31 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const questions = [
+  {
+    type: "input",
+    message: "What is your name?",
+    name: "name",
+  },
+];
+function init() {
+    console.log("Enter information to create your team.");
+    inquirer.prompt(questions).then((response) => {
+      console.log(response);
+  
+      const htmlTemplate = render(response);
+      // Create a function to write README file
+      fs.writeFile("team.html", htmlTemplate, (err) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("Your Team's page is ready. It is titled  ");
+        }
+      });
+    });
+  }
+  init();
+  
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
