@@ -13,38 +13,31 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-const questions = [
+const employees = [];
+
+const addEmployee = [
   {
-    type: "input",
-    message: "What is your name?",
-    name: "Name",
+    type: "list",
+    message: "Which team members would you like to add?",
+    name: "addEmployee",
+    choices: [
+      { name: "none" },
+      { name: "Intern" },
+      { name: "Engineer" },
+      { name: "Manager" },
+    ],
   },
-  {
-    type: "input",
-    message: "What is your role?",
-    name: "Role",
-  },
-  {
-    type: "input",
-    message: "What is your ID?",
-    name: "ID",
-  },
- 
 ];
 function init() {
   console.log("Enter information to create your team.");
-  inquirer.prompt(questions).then((response) => {
-    console.log(response);
+  inquirer.prompt(addEmployee).then((response) => {
+    if (response.addEmployee === "Engineer") {
+      console.log("Is that so now");
+    } else {
+      console.log(response);
+    }
 
-    // const htmlTemplate = render(response);
     // Create a function to write README file
-    fs.writeFile("team.html", "Will this work " + response.Name, (err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("Your Team's page is ready. It is titled  ");
-      }
-    });
   });
 }
 init();
