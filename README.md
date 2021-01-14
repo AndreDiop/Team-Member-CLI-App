@@ -21,7 +21,7 @@
 # About
  This command line interface application will generate a webpage that displays a team's basic info so that you can have quick access to team member's emails and GitHub profiles
 ## Installation
-This app requires NPM and the following packages:Inquirer, FS, Jest.
+The dependencies are, [jest](https://jestjs.io/) for running the provided tests, and [inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user.
 ## Usage
 Coming soon
 ## Test Instructions
