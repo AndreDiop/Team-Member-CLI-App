@@ -19,13 +19,25 @@
 [Licenses](#Licenses)
           
 # About
- This command line interface application will generate a webpage that displays a team's basic info so that you can have quick access to team member's emails and GitHub profiles
+ This command line interface application will generate a webpage that displays a team's basic info so that you can have quick access to team member's information such as emails and GitHub profiles
 ## Installation
 The dependencies are, [jest](https://jestjs.io/) for running the provided tests, and [inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user.
 ## Usage
-Coming soon
+Users will enter 'node app.js' in the CLI to initalize the app
+Users will be prompted to enter information about the Team Manager.
+
+After entering information about the Team Manager users are prompted to;
+    add additional team members
+        add information about the Intern
+        add information about the Engineer
+    select 'none. Create my Team!'
+
+Upon selecting 'none' and creating the team, users will see that a 'output' folder has been generated and a 'team.html' file has been created that dynamically displays information about yor team.
+
+
+
 ## Test Instructions
-There are no failing test cases I am aware of.
+This app has not been validated to not accept junk values in the input fields. This will be revised in the future.
           
           
 ## Contributing

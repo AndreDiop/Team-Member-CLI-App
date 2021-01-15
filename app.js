@@ -23,7 +23,7 @@ const addEmployee = [
     type: "list",
     message: "Which team members would you like to add?",
     name: "addEmployee",
-    choices: [{ name: "none" }, { name: "Intern" }, { name: "Engineer" }],
+    choices: [{ name: "none. Create my Team!" }, { name: "Intern" }, { name: "Engineer" }],
   },
 ];
 function addToTeam() {
@@ -149,7 +149,7 @@ const addEngineer = () => {
     addToTeam();
   });
 };
-console.log("Enter information about the manager:");
+console.log("Welcome to the Team Member Command Line Interface App! Please Enter information about the manager of your team:");
 addManager();
 // Create a function to write README file
 function buildTeam() {
